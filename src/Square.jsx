@@ -1,16 +1,18 @@
+import React from 'react';
 
+export default function Square() {
+  const [num, setNum] = React.useState(' ');
 
-export default function Square(props) {
-  function handleClick(n) {
-    window.alert(`Clicked ${n}!`);
+  function handleClick() {
+    setNum('X');
   }
 
   return (
     <button
       className="square"
-      onClick={() => handleClick(props.num)}
+      onClick={handleClick}
     >
-      {props.num}
+      {num}
     </button>
   );
 }
