@@ -16,10 +16,14 @@
 	"forwardPorts": [5173],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "git config --global user.name \"John Tran\" && git config --global user.email john.kn.tran@gmail.com"
+	"postCreateCommand": "git config --global user.name \"John Tran\" && git config --global user.email john.kn.tran@gmail.com",
 
 	// Configure tool-specific properties.
-	// "customizations": {},
+	"customizations": {
+		"editor.rulers": [
+			10, 20, 30, 40, 50, 60, 70
+		]
+	}
 
 	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
 	// "remoteUser": "root"

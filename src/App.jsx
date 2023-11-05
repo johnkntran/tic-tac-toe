@@ -1,35 +1,26 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import './App.css';
+import Square from './Square';
 
-function App() {
-  const [count, setCount] = useState(0)
-
+export default function Board() {
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <main>
+      <section className="board-row">
+        <Square num="1" />
+        <Square num="2" />
+        <Square num="3" />
+      </section>
+      <section className="board-row">
+        <Square num="4" />
+        <Square num="5" />
+        <Square num="6" />
+      </section>
+      <section className="board-row">
+        <Square num="7" />
+        <Square num="8" />
+        <Square num="9" />
+      </section>
+    </main>
+  );
 }
 
-export default App
+
