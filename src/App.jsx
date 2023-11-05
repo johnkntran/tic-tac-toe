@@ -3,21 +3,19 @@ import './App.css';
 import Board from './Board';
 
 export default function Game() {
-  const [xTurn, setXTurn] = React.useState(true);
   const [history, setHistory] = React.useState([Array(9).fill(' ')]);
   const [currentMove, setCurrentMove] = React.useState(0);
+  const xTurn = currentMove % 2 === 0;
   const currentSquares = history[currentMove];
 
   function handlePlay(nextSquares) {
     const nextHistory = [...history.slice(0, currentMove + 1), nextSquares];
     setHistory(nextHistory);
     setCurrentMove(nextHistory.length - 1);
-    setXTurn(!xTurn);
   }
 
   function teleportTo(nextMove) {
     setCurrentMove(nextMove);
-    setXTurn(nextMove % 2 === 0);
   }
 
   const moves = history.map((squares, move) => {
