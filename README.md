@@ -1,8 +1,13 @@
-# React + Vite
+# Tic Tac Toe
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Intro
 
-Currently, two official plugins are available:
+This was me going through the tutorial for [Tic-Tac-Toe in React](https://react.dev/learn/tutorial-tic-tac-toe).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Setup Steps
+
+- You will need [VS Code](https://code.visualstudio.com) to run this repository. You will also need to add the Dev Containers Extension (ms-vscode-remote.remote-containers) to your VS Code plugins. The project uses [Vite](https://vitejs.dev/) to compile React.
+- Open the folder in VS Code. Then click `Command (CTRL) + P`. Type in `"> Dev Containers: Reopen in Container"`.
+- Once the container loads up, open a terminal and type `npm install`.
+- Once the package dependencies finish, type `npm run dev` to serve the app.
+- Navigate to [localhost:5173](http://127.0.0.1:5173) to view the app.
