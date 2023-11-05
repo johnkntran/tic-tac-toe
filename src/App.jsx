@@ -12,13 +12,26 @@ export default function Game() {
     setXTurn(!xTurn);
   }
 
+  function teleportTo(nextMove) {}
+
+  const moves = history.map((squares, move) => {
+    const description = move === 0 ? 'Go to game start' : `Go to Move #${move}`;
+    return (
+      <li key={move}>
+        <button onClick={() => teleportTo(move)}>
+          {description}
+        </button>
+      </li>
+    );
+  });
+
   return (
     <main className="game">
       <div className="game-board">
         <Board xTurn={xTurn} squares={currentSquares} onPlay={handlePlay} />
       </div>
       <div className="game-info">
-        <ol>{/*TODO*/}</ol>
+        <ol>{moves}</ol>
       </div>
     </main>
   );
