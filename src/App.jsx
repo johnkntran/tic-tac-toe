@@ -5,14 +5,20 @@ import Board from './Board';
 export default function Game() {
   const [xTurn, setXTurn] = React.useState(true);
   const [history, setHistory] = React.useState([Array(9).fill(' ')]);
-  const currentSquares = history[history.length - 1];
+  const [currentMove, setCurrentMove] = React.useState(0);
+  const currentSquares = history[currentMove];
 
   function handlePlay(nextSquares) {
-    setHistory([...history, nextSquares]);
+    const nextHistory = [...history.slice(0, currentMove + 1), nextSquares];
+    setHistory(nextHistory);
+    setCurrentMove(nextHistory.length - 1);
     setXTurn(!xTurn);
   }
 
-  function teleportTo(nextMove) {}
+  function teleportTo(nextMove) {
+    setCurrentMove(nextMove);
+    setXTurn(nextMove % 2 === 0);
+  }
 
   const moves = history.map((squares, move) => {
     const description = move === 0 ? 'Go to game start' : `Go to Move #${move}`;
