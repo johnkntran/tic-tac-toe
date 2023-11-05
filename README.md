@@ -4,6 +4,8 @@
 
 This was me going through the tutorial for [Tic-Tac-Toe in React](https://react.dev/learn/tutorial-tic-tac-toe).
 
+<img src="./public/screenshot.jpg">
+
 ## Setup Steps
 
 - You will need [VS Code](https://code.visualstudio.com) to run this repository. You will also need to add the Dev Containers Extension (ms-vscode-remote.remote-containers) to your VS Code plugins. The project uses [Vite](https://vitejs.dev/) to compile React.
